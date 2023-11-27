@@ -1,0 +1,83 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Blazor.Web
+build_property.RootNamespace = Blazor.Web
+build_property.ProjectDir = E:\DevProjetos\blazor-api\Blazor.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\DevProjetos\blazor-api\Blazor.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/CarrinhoMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XENhcnJpbmhvTWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/ExibirErro.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEV4aWJpckVycm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/Catalogo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ28ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/ProdutoDetalhes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b0RldGFsaGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/ProdutosPorCategoria.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NQb3JDYXRlZ29yaWEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/ExibirSpinner.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEV4aWJpclNwaW5uZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4xvvifbkqu
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ry486eettm
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-witdzi274f
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Layout/ProdutosCategoriaNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFByb2R1dG9zQ2F0ZWdvcmlhTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ludyx81s6o
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/CarrinhoCheckout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmluaG9DaGVja291dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-62z0cnmlpg
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/CarrinhoCompra.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmluaG9Db21wcmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-unb25393mf
+
+[E:/DevProjetos/blazor-api/Blazor.Web/Pages/ExibirProdutos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhpYmlyUHJvZHV0b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-dc47yvhqvw

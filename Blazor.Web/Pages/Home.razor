@@ -1,0 +1,77 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+@inject IProdutoService produtoService
+
+@if (Produtos == null)
+{
+    <ExibirSpinner></ExibirSpinner>
+}
+else
+{
+    <h3>Produtos</h3>
+    @if (Produtos.Count() > 0)
+    {
+        //retorna a lista ordenada por categoria e passa por parametro no componente
+        var produtosPorCategoria = from produto in Produtos
+                                   group produto by produto.CategoriaId into prodPorCategoria
+                                   orderby prodPorCategoria.Key
+                                   select prodPorCategoria;
+
+        @foreach (var prodGrupo in produtosPorCategoria)
+        {
+            //mostra nome da categoria
+            <h4>@prodGrupo.FirstOrDefault(x => x.CategoriaId == prodGrupo.Key).CategoriaNome</h4>
+
+            <div class="row mt-3">
+                <ExibirProdutos Produtos="@prodGrupo"></ExibirProdutos>
+            </div>
+            <hr class="mb-2" />
+        }
+
+
+    }
+
+}
+
+
+@code {
+
+    private IEnumerable<ProdutoDTO>? Produtos { get; set; }
+
+    [Inject]
+    public ICarrinhoCompraService CarrinhoCompraService { get; set; }
+
+    [Inject]
+    public IGerenciaProdutosLocalStorageService?
+             GerenciaProdutosLocalStorageService
+    { get; set; }
+
+    [Inject]
+    public IGerenciaCarrinhoItensLocalStorageService?
+                 GerenciaCarrinhoItensLocalStorageService
+    { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LimpaLocalStorage(); //limpa o local storage
+
+        Produtos = await GerenciaProdutosLocalStorageService.GetCollection(); //busca os produtos no local storage
+
+        var carrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService
+                               .GetCollection(); //busca os itens do carrinho no local storage
+
+        var carrinhoItens = await CarrinhoCompraService.GetItens(UsuarioLogado.UsuarioId);
+        var totalItens = carrinhoCompraItens.Count();
+
+        CarrinhoCompraService.RaiseEventOnCarrinhoCompraChanged(totalItens);
+    }
+
+    private async Task LimpaLocalStorage()
+    {
+        await GerenciaProdutosLocalStorageService.RemoveCollection();
+        await GerenciaCarrinhoItensLocalStorageService.RemoveCollection();
+    }
+
+}
