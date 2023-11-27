@@ -1,0 +1,31 @@
+﻿@page "/Success"
+
+<div class="row center">
+    <div style="margin-left:-10px;">
+        <h4 style="text-shadow: 1px -4px 8px rgba(42,206,23,0.92);">Pagamento Aprovado. </h4>
+    </div>
+    <div>
+        <img class="loader" src="/verified.gif" />
+    </div>
+
+    <div style="margin-top: 25px;margin-left: 40px;">
+        <a href="#" class="btn btn-success" @onclick="(()=>VoltarParaLoja())">Voltar para a loja </a>
+    </div>
+</div>
+
+@code{
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+       // await Task.Delay(5000);
+       // NavigationManager.NavigateTo("/");
+    }
+
+    private void VoltarParaLoja()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

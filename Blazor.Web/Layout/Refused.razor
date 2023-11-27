@@ -1,0 +1,20 @@
+﻿@page "/Refused/{CarrinhoId:int}"
+
+<div class="row center">
+    <div style="margin-left:-10px;">
+        <h4 style="text-shadow: 1px -4px 8px rgba(206,58,58,0.92);">Pagamento Recusado</h4>
+    </div>
+    <div>
+        <img class="loader" src="/Error.gif" />
+    </div>
+    <div style="margin-top: 25px;margin-left: 40px;">
+        <a href="/CarrinhoCheckout/@CarrinhoId" class="btn btn-secondary">Voltar para Carrinho </a>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public int CarrinhoId { get; set; }
+
+}

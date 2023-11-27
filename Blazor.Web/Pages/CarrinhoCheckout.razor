@@ -1,5 +1,7 @@
 ﻿@page "/CarrinhoCheckout/{CarrinhoId:int}"
+@using Blazor.Web.AppStates
 @inject IJSRuntime Js;
+@inject AppCarrinhoState CarrinhoState;
 
 
 @if (Carrinho is null && MensagemErro is null)
@@ -147,7 +149,7 @@ else
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pagar</button>
+                    <button class="btn btn-primary btn-lg btn-block" @onclick="()=>ProcessarPagamento()">Pagar</button>
                 </form>
             </div>
         </div>
@@ -166,6 +168,9 @@ else
 
     [Inject]
     public ICarrinhoCompraService? CarrinhoService { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
 
     public CarrinhoDTO? Carrinho { get; set; }
 
@@ -194,6 +199,11 @@ else
             MensagemErro = ex.Message;
         }
     }
+    private void ProcessarPagamento()
+    {
+        CarrinhoState.Carrinho = Carrinho;
+        NavigationManager.NavigateTo("/ProcessarPagamento");
+    }
 
     protected async Task AplicarCupon_Click()
     {
@@ -221,6 +231,7 @@ else
             {
                 var total = Carrinho.Items.Sum(p => p.PrecoTotal);
                 decimal precoDesconto = total - (total * (desconto / 100.0M));
+                Carrinho.SubTotal = precoDesconto;
                 SubTotal = precoDesconto.ToString("C");
             }
 

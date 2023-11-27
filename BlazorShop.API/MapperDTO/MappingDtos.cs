@@ -122,7 +122,8 @@ namespace BlazorShop.API.MapperDTO
                     ProdutoNome = i.Produto.Nome,
                     Quantidade = i.Quantidade
 
-                }).ToList()
+                }).ToList(),
+                SubTotal = carrinho.Items.Sum(i => i.Produto.Preco * i.Quantidade)
             };
         }
     }

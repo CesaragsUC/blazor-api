@@ -1,4 +1,5 @@
 using Blazor.Web;
+using Blazor.Web.AppStates;
 using Blazor.Web.Services;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
@@ -17,6 +18,7 @@ builder.Services.AddScoped(sp => new HttpClient
 
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<ICarrinhoCompraService, CarrinhoCompraService>();
+builder.Services.AddScoped<AppCarrinhoState>();
 
 builder.Services.AddBlazoredLocalStorage();
 
